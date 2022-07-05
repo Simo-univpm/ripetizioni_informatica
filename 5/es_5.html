@@ -1,0 +1,49 @@
+<html>
+        <head>
+            <title>Esercizio Html 5 </title>
+            <script>
+
+                var i; 
+                var numeri = new Array();
+                var somma = 0;
+                var media = 0;
+
+                function carica()    {
+
+                    window.alert("Inserisci i tre valori");
+
+                    for(i=0; i<3; i++)    {
+                        numeri[i] = parseInt(prompt("inserisci numero"));                    
+                    }
+
+
+                    }
+
+                function calcolaMedia() {
+ 
+                    for(i=0; i<3; i++)  {
+
+                        // 0 = 0 + 4, 4 = 4 + 8, 8 = 8 + 2
+                        somma = somma + numeri[i]
+
+                    }
+                        
+                        media = somma/3
+
+                }
+
+                function visualizza()   {
+                        document.write(media);                 
+                    }
+
+             </script>
+
+        </head>
+    <body>
+    <form name="modulo">
+        <input type="button" value="carica i tre valori" onclick="carica()">
+        <input type="button" value="Calcola media" onclick="calcolaMedia()">
+        <input type="button" value="Visualizza Media" onclick="visualizza()">
+
+    </body>
+</html>
